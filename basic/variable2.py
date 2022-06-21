@@ -7,13 +7,13 @@ from datetime import date
 
 
 str1 = "Life is too short, You need Python"
-str2 = 'Life is too short, You need Python'
+str2 = "Life is too short, You need Python"
 str3 = """
 Life is too short, You need Python
 """
-str4='''
+str4 = """
 Life is too short, You need Python
-'''
+"""
 
 str5 = "python's favorite food"
 
@@ -25,29 +25,30 @@ print(str4)
 # + : 문자열 연결
 head = "Python"
 tail = " is fun"
-print(head+tail)
+print(head + tail)
 
 # * : 반복
 a = "python"
 print(a * 2)
 
-print("*"*50)
+print("*" * 50)
 print("My program")
-print("*"*50)
+print("*" * 50)
 
 # 문자열 인덱싱 - 왼쪽을 기준으로 0
 str1 = "Life is too short"
-print("str1[3]", str1[3]) # e
+print("str1[3]", str1[3])  # e
 # 오른쪽을 기준으로 -1
-print("str1[-3]", str1[-3]) # o
+print("str1[-3]", str1[-3])  # o
 print()
 # 마지막 숫자 범위는 포함 안함
-print("str1[0:4]",str1[0:4])
-print("str1[4:8]",str1[4:8])
-print("str1[9:]",str1[9:])
-print("str1[:17]",str1[:17])
-print("str1[0:-4]",str1[0:-4])
+print("str1[0:4]", str1[0:4])
+print("str1[4:8]", str1[4:8])
+print("str1[9:]", str1[9:])
+print("str1[:17]", str1[:17])
+print("str1[0:-4]", str1[0:-4])
 print()
+
 
 # 실습
 str2 = "20220520Sunny"
@@ -60,33 +61,33 @@ print(date)
 print(weather)
 
 # date 변수에 있는 값을 2022-05-20 출력
-year = date[0:4] 
+year = date[0:4]
 month = date[4:6]
 day = date[6:]
-print(year,month,day,sep="-")
+print(year, month, day, sep="-")
 
 # date, weather 출력 2022-05-20 Sunny 출력
-print(year,month,day,sep="-", end=" ")
+print(year, month, day, sep="-", end=" ")
 print(weather)
 
 # 문자열 관련 함수들
 # len()
-print("문자열 길이",len(str1))
+print("문자열 길이", len(str1))
 # count()
-print("문자열에 포함된 특정 문자의 수 : ",str1.count('t'))
-print("문자열에 포함된 특정 문자의 수 : %d" % str1.count('t'))
-print("문자열에 포함된 특정 문자의 수 : {}".format(str1.count('t')))
+print("문자열에 포함된 특정 문자의 수 : ", str1.count("t"))
+print("문자열에 포함된 특정 문자의 수 : %d" % str1.count("t"))
+print("문자열에 포함된 특정 문자의 수 : {}".format(str1.count("t")))
 # find('찾을문자',시작위치)
 print("특정 문자가 시작되는 첫번째 위치 반환", str1.find("i"))
 print("특정 문자가 시작되는 첫번째 위치 반환", str1.find("k"))
-print("특정 문자가 시작되는 첫번째 위치 반환", str1.find("i",4))
+print("특정 문자가 시작되는 첫번째 위치 반환", str1.find("i", 4))
 # index() : 찾는 문자열이 없다면 에러 발생
 print("특정 문자가 시작되는 첫번째 위치 반환", str1.index("i"))
 # print("특정 문자가 시작되는 첫번째 위치 반환", str1.index("k")) # ValueError: substring not found
 print()
 # startswith(), endswith()
-print(str1.startswith("L")) # True
-print(str1.startswith("l")) # False
+print(str1.startswith("L"))  # True
+print(str1.startswith("l"))  # False
 print(str1.endswith("t"))
 print(str1.endswith("T"))
 print()
@@ -109,25 +110,25 @@ print("abc" == "ABC")
 print()
 # 공백제거 : strip(), lstrip(), rstrip()
 a = "    hi    "
-print(a.lstrip()) # 왼쪽공백 제거
-print(a.strip()) # 양쪽공백 제거
-print(a.rstrip()) # 오른쪽공백 제거
+print(a.lstrip())  # 왼쪽공백 제거
+print(a.strip())  # 양쪽공백 제거
+print(a.rstrip())  # 오른쪽공백 제거
 print()
 # replace() : 문자열 바꾸기
-print(str1.replace("Life","Your leg"))
+print(str1.replace("Life", "Your leg"))
 print()
 # split() : 문자열 나누기(default:공백)
-print(str1.split()) # ['Life', 'is', 'too', 'short'] 리스트 구조로 리턴됨
+print(str1.split())  # ['Life', 'is', 'too', 'short'] 리스트 구조로 리턴됨
 a = "a:b:c:d"
-print(a.split(":")) # ['a', 'b', 'c', 'd']
-# splitlines() : 줄바꿈을 기준으로 나누기 
-a = "하나\n둘\n셋" 
-print(a.splitlines()) # ['하나', '둘', '셋']
+print(a.split(":"))  # ['a', 'b', 'c', 'd']
+# splitlines() : 줄바꿈을 기준으로 나누기
+a = "하나\n둘\n셋"
+print(a.splitlines())  # ['하나', '둘', '셋']
 
 # 문자열 구성 파악
 print("1234".isdigit())
-print('abcd'.isalpha())
-print('abc123'.isalnum())
+print("abcd".isalpha())
+print("abc123".isalnum())
 print("abcd".islower())
 print("ABCD".isupper())
 print()
@@ -140,10 +141,12 @@ print()
 # 결과 : nav51!
 url = "http://naver.com"
 url = url.strip("http://")
-url = url[:url.find(".")]
+url = url[: url.find(".")]
 e_cnt = url.count("e")
 
 # 문자 + 숫자 : 연결 되지 않음(에러 발생)
 # 문자 + str(숫자) : 연결
-password = url[:3]+str(len(url))+str(e_cnt)+"!" # TypeError: can only concatenate str (not "int") to str
+password = (
+    url[:3] + str(len(url)) + str(e_cnt) + "!"
+)  # TypeError: can only concatenate str (not "int") to str
 print(password)
